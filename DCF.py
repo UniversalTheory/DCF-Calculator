@@ -1,4 +1,5 @@
-# Company future valuation prediction program
+# A short script for calculating the future value of a company in a given time period using the DCF model
+
 # Necessary variables include: 
 # Cash flow, growth rate, rate of return, and timeframe for prediction 
 
