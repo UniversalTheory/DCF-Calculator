@@ -21,6 +21,13 @@ def calculate_future_value():
         result_label.config(text=f"Estimated Future Value: {round(fv, 2)}")
     except ValueError as e:
         messagebox.showerror("Invalid Input", str(e))
+        
+def clear_input_fields():
+    cf_entry.delete(0, tk.END)
+    g_entry.delete(0, tk.END)
+    r_entry.delete(0, tk.END)
+    n_entry.delete(0, tk.END)
+    result_label.config(text="")
 
 # Creating the main window
 window = tk.Tk()
@@ -46,6 +53,10 @@ n_entry.pack()
 # Calculate button
 calculate_button = tk.Button(window, text="Calculate", command=calculate_future_value)
 calculate_button.pack()
+
+# Clear button
+clear_button = tk.Button(window, text="Clear", command=clear_input_fields)
+clear_button.pack()
 
 # Result label
 result_label = tk.Label(window, text="", font=('bold', 14))
